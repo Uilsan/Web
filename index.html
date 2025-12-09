@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="director wes anderson" content="who is wes anderson?">
+	<title>Wes Anderson</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+	</style>
+	<style>
+		body {
+			margin: 0;
+			background-color: #F7F4EE;
+			font-family: 'Cormorant Garamond', serif;
+		}
+		.site-header {
+            height: 140px;
+            background-color: #F7F4EE;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .nav-bar {
+            width: 100%;
+            max-width: 1100px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 40px;
+            box-sizing: border-box;
+        }
+
+        .nav-side {
+            width: 60px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .icon-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 1px solid #111;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        .nav-center{
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .logo {
+        	margin-bottom: 10;
+        	width: 70px;
+            height: 70px;
+            display: block;
+        }
+
+        .nav-list {
+            list-style: none;
+            display: flex;
+            gap: 40px;
+            padding: 0;
+            margin-top: 10;
+        }
+
+        .nav-list a {
+            text-decoration: none;
+            letter-spacing: 0.1em;
+            color: #111;
+            font-size: 14px;
+            font-weight: 600;
+            font-family: 'DM Sans', sans-serif;
+        }
+
+        .nav-list a:hover {
+            text-decoration: underline;
+            text-underline-offset: 4px;
+        }
+
+		#hero {
+			background: linear-gradient(144.11deg, #F7F4EE 8.44%, #FFE4CE 22.37%, #FED8B7 71.42%);
+		}
+
+		.hero_top {
+			position: relative;
+		}
+
+		.hero_top__img_wrapper {
+			margin-left: 32px;
+		}
+
+		img.rounded_img {
+			width: 100%;
+			border-top-left-radius: 16px;
+			border-bottom-left-radius: 16px;
+		}
+
+		.hero_words {
+			position: absolute;
+		}
+
+		#hero_words1 {
+			top: 3%;
+			left: 10%;
+			font-size: 6vw;
+			text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+		}
+
+		#hero_words2 {
+			top: 40%;
+			left: 40%;
+			color: rgba(255, 255, 255, 0.75);
+			font-size: 15px;
+		}
+
+		#hero_words3 {
+			bottom: 19%;
+			left: 5%;
+			width: 45%;
+			color: rgba(0, 0, 0, 0.55);
+			font-size: 20px;
+		}
+
+		#hero_words4 {
+			right: 8%;
+			bottom: 15%;
+			font-size: 6vw;
+			text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+		}
+
+		.hero_bottom {
+			padding: 150px 110px;
+			display: flex;
+			flex-direction: column;
+			gap: 40px;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.movie_colorcode_row {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: center;
+			gap: 60px;
+		}
+
+		.movie_colorcode__container {
+			text-align: center;
+		}
+
+		.movie_colorcode__container p {
+			color: black;
+			font-size: 24px;
+		}
+
+		.movie_colorcode__wrap {
+			display: inline-flex;
+		}
+
+		.movie_colorcode {
+			width: 48px;
+			height: 48px;
+		}
+
+		.red_section {
+			background-image: url(red.jpeg);
+			background-size: cover;
+			background-position: left;
+			padding: 80px 0 120px;
+			position: relative;
+		}
+
+		.red_content {
+			width: 83%;
+			margin: auto;
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-start;
+			gap: 40px;
+		}
+
+		.left_col {
+			width: 45%;
+		}
+
+		.portrait_img {
+			width: 50;
+			max-width: 350px;
+			border-radius: 6px;
+		}
+
+		.left_text {
+			margin-top: 25px;
+			font-size: 20px;
+			line-height: 1.5;
+			font-family: "cormorant Garamond" serif;
+			color: #3b1d1d;
+		}
+
+		.right_col {
+			width: 48%;
+			font-family: "Cormorant Garamond" serif;
+			color: #3b1d1d;
+		}
+
+		.right_col p {
+			font-size: 20px;
+			line-height: 1.45;
+		}
+
+		.stars {
+			text-align: center;
+			font-size: 32px;
+			margin: 15px 0;
+		}
+
+		.apple_img {
+			
+
+		@keyframes fall-and-roll {
+			from { transform: translateY(0); }
+			to { transform: translateY(-25px); }
+		}
+	</style>
+
+</head>
+
+<body>
+	<header class="site-header">
+    <nav class="nav-bar">
+
+    <div class="nav-side-left">
+        <img src="button.svg" class="icon-btn">
+    </div>
+
+    <div class="nav-center-row">
+        <ul class="nav-list">
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">ABOUT</a></li>
+            <div style="margin-bottom: 10;">
+            	<li class="logo-item">
+                <img src="weslogo.jpeg" class="logo">
+            </li>
+        </div>
+
+            
+
+            <li><a href="#">MOVIES</a></li>
+            <li><a href="#">SYMMETRY</a></li>
+        </ul>
+    </div>
+
+    <div class="nav-side-right">
+        <img src="button1.svg" class="icon-btn">
+    </div>
+
+</nav>
+
+
+    </header>
+	<section id="hero">
+		<div class="hero_top">
+			<div class="hero_top__img_wrapper">
+				<img class="rounded_img" src='tree.jpeg' />
+			</div>
+			<div id="hero_words1" class="hero_words">
+				<h1 class="intro-heading">ANDER</h1>
+			</div>
+			<div id="hero_words2" class="hero_words">
+				<h3 class="main-heading">THE WORLD OF WES ANDERSON</h3>
+			</div>
+			<div id="hero_words3" class="hero_words">
+				<p> Wes Anderson has created<br />one of the most recognizable<br />cinematic languages in modern film.<br />From
+					perfect center framing to nostalgic palettes and storybook tones,<br />his films feel like stepping into a handcrafted universe where every<br />detail matters. Scroll to explore the visual rules, storytelling methods,<br />and creative quirks that make his world unique.													
+				</p>
+			</div>
+			<div id="hero_words4" class="hero_words">
+				<h1 class="intro-heading">SONIAN</h1>
+			</div>
+		</div>
+		<div class="hero_bottom">
+			<h1 style=" color: #7A5023;">
+			THE WES ANDERSON COLOR LANGUAGE</h1>
+			<div class="" style="display: flex; flex-direction: row; gap: 40px">
+				<div style="flex: 1;">
+					<p style="text-align: center;">
+						Color is not decoration in a Wes Anderson film — it is emotion, mood, and identity.Each film has
+						a carefully curated palette that acts like its own visual signature
+					</p>
+				</div>
+				<div style="flex: 1;">
+
+					<p style="text-align: center;">
+						Instead of using CGI, Anderson builds his universes by hand — trains, hotels, submarines, cities
+						— all crafted like museum exhibits.
+					</p>
+				</div>
+			</div>
+			<div style="width: 100%; border-top: 1px solid black"></div>
+			<div class="movie_colorcode_row">
+				<div class="movie_colorcode__container">
+					<div class="movie_colorcode__wrap">
+						<div class="movie_colorcode" style="background: #F6A093;">
+						</div>
+						<div class="movie_colorcode" style="background: #D4715F;">
+						</div>
+					</div>
+					<p>
+						The Grand <br />Budapest Hotel
+					</p>
+				</div>
+				<div class="movie_colorcode__container">
+					<div class="movie_colorcode__wrap">
+						<div class="movie_colorcode" style="background: #83A98A;">
+						</div>
+						<div class="movie_colorcode" style="background: #D3C988;">
+						</div>
+					</div>
+					<p>
+						Moonrise <br />Kingdom
+					</p>
+				</div>
+				<div class="movie_colorcode__container">
+					<div class="movie_colorcode__wrap">
+						<div class="movie_colorcode" style="background: #F3B87D;">
+						</div>
+						<div class="movie_colorcode" style="background: #F8A85F;">
+						</div>
+					</div>
+					<p>
+						Fantastic <br />Mr.Fox
+					</p>
+				</div>
+				<div class="movie_colorcode__container">
+					<div class="movie_colorcode__wrap">
+						<div class="movie_colorcode" style="background: #DA5935;">
+						</div>
+						<div class="movie_colorcode" style="background: #C65435;">
+						</div>
+					</div>
+					<p>
+						Asteroid <br />City
+					</p>
+				</div>
+				<div class="movie_colorcode__container">
+					<div class="movie_colorcode__wrap">
+						<div class="movie_colorcode" style="background: #87CBD0;">
+						</div>
+						<div class="movie_colorcode" style="background: #539A91;">
+						</div>
+					</div>
+					<p>
+						The French <br />Dispatch
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="red_section">
+
+        <div class="red_content">
+            <div class="left_col">
+                <img src="wesport.png" class="portrait_img">
+                <p class="left_text">
+                Wes Anderson is an American film director, screenwriter, and producer known for 
+                creating one of the most distinctive visual styles in modern cinema. Born in Houston, 
+                Texas in 1969, he began making short films with his friends as a teenager. After 
+                studying philosophy at the University of Texas, he met future collaborator Owen Wilson — 
+                a partnership that launched his filmmaking career.
+
+                Anderson’s movies are instantly recognizable: pastel color palettes, centered 
+                compositions, whip-pan camera movements, carefully curated sets, deadpan humor, and 
+                dialogue that feels both literary and nostalgic. But behind the charming visuals lies 
+                something deeper — stories about family, loss, longing, and people trying to find meaning 
+                in a chaotic world.
+                </p>           
+            </div>
+            <div class="right_col">
+            	<h2>Over the years, Wes Anderson has developed...</h2>
+            	<p>Over the years, Wes Anderson has developed a reputation as a true auteur — a filmmaker whose movies are instantly identifiable not by plot, but by feeling.
+            	</p>
+            	<p class="stars">★★★</p>
+            	<p>His work blends whimsy with melancholy, precision with chaos, and storytelling 
+                with visual poetry. This is why his cinema is not just watched — it is experienced.
+                </p>  
+            </div>
+        </div>
+            <img src="apple.png" class="apple_img" style="position: absolute;
+			width: auto;
+			right: 50px;
+			top: -50px;
+			animation: fall-and roll 2s infinite;
+		}">
+
+    </section>
+
+	<section id="about">
+		<div class="container">
+			<img src="wesport.png">
+			<p>Wes Anderson is an American film director, screenwriter, and producer known for creating one of the most
+				distinctive visual styles in modern cinema. Born in Houston, Texas in 1969, he began making short films
+				with his friends as a teenager. After studying philosophy at the University of Texas, he met future
+				collaborator Owen Wilson — a partnership that launched his filmmaking career.
+				Anderson’s movies are instantly recognizable: pastel color palettes, centered compositions, whip-pan
+				camera movements, carefully curated sets, deadpan humor, and dialogue that feels both literary and
+				nostalgic. But behind the charming visuals lies something deeper — stories about family, loneliness,
+				longing, and people trying their best in a chaotic world.</p>
+			<p>Over the years, Wes Anderson has developed a reputation as a true auteur — a filmmaker whose movies are
+				instantly identifiable not by plot, but by feeling.
+				His work blends whimsy with melancholy, precision with chaos, and storytelling with visual poetry.This
+				is why his cinema is not just watched — it is experienced.</p>
+		</div>
+	</section>
+
+	<section class="red_section">
+		<div class="red"></div>
+	</section>
+
+	<section id="symmetry">
+		<div class="container">
+			<h1>Perfect Symmetry - The Signature Shot</h1>
+			<img src="tgbh3.jpeg">
+			<img src="swan1.jpg">
+			<img src="dar1.jpg">
+			<p>Wes Anderson is famous for framing his shots like paintings.His use of symmetry gives a sense of control,
+				order, and intentionality.Objects align. Characters face directly forward. Rooms become dioramas.</p>
+		</div>
+	</section>
+
+	<section id="symmetry">
+		<div class="container">
+			<h1>Handmade Worlds & Miniature Sets</h1>
+			<p>Anderson’s films feel tangible because they often are. He uses miniatures, handcrafted models,
+				stop-motion techniques, and tactile props.</p>
+			<img src="fox5.jpeg">
+			<img src="dog3.jpeg">
+			<img src="fox10.jpeg">
+			<img src="girl2.jpeg">
+			<p>The Grand Budapest Hotel’s exterior is a miniature model
+				Fantastic Mr. Fox uses real fur and fabric
+				The French Dispatch features sets that feel like magazine layouts
+				Isle of Dogs uses 1,097 handmade puppets</p>
+			<p>Everything is made with love, texture, and imperfect beauty — giving his worlds a warmth digital effects
+				can’t replicate.</p>
+		</div>
+	</section>
+
+	<section id="symmetry">
+		<div class="container">
+			<h1>Outsiders, Dreamers, and Broken Hearts</h1>
+			<p> Emotionally wounded but sincere
+				Nostalgic for something lost
+				Intellectual or overly formal
+				Quietly longing for connection
+				Childlike curiosity mixed with
+				adult sadness</p>
+			<p>Wes Anderson’s characters are quirky, flawed, and strangely dignified.They often share these traits</p>
+		</div>
+	</section>
+
+	<section id="testimonial">
+		<div class="container">
+			<img src="">
+			<h1>These characters live in whimsical worlds, but their feelings are painfully real.</h1>
+		</div>
+	</section>
+
+	<section id="movies">
+		<div class="gallery">
+			<img src="hotel.jpeg" alt="">
+			<img src="dog1.jpeg" alt="">
+			<img src="mk.jpg" alt="">
+			<img src="royal.jpg" alt="">
+			<img src="swan.jpg" alt="">
+			<img src="french.jpg" alt="">
+		</div>
+
+	</section>
+
+	<section>
+		<div class="container">
+			<video src="foottree.mp4" autoplay muted loop></video>
+			<h1>ANDER SONIAN</h1>
+			<p>“His worlds are candy-colored wrappers for bittersweet truths.”</p>
+		</div>
+	</section>
+
+	<footer>
+		<div>
+			<p>END OF CHAPTER</p>
+		</div>
+		<div>
+			<p>About</p>
+			<p>director</p>
+			<p>color</p>
+		</div>
+		<div>
+			<p>Movies</p>
+			<p>aesthetic</p>
+			<p>symbolism</p>
+		</div>
+		<div>
+			<p>Symmetry</p>
+			<p>characters</p>
+			<p>films</p>
+		</div>
+		<div>
+			<p>2025 Munkhjin | All visuals belong to their respective owners.</p>
+			<p>Wes Anderson Fan Made Site</p>
+		</div>
+
+	</footer>
+</body>
+
+
+</html>
